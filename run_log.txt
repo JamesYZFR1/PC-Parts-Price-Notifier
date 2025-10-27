@@ -1,0 +1,625 @@
+[2025-10-25 13:42:03.779092] --- Script run started ---
+[2025-10-25 13:42:04.649470] Found 7 new deals. Notification sent.
+[2025-10-25 15:28:02.649939] --- Script run started ---
+[2025-10-25 15:28:03.158671] No new deals found.
+[2025-10-25 15:47:17.619612] --- Test notification sent ---
+[2025-10-25 15:51:01.297713] --- Script run started ---
+[2025-10-25 15:51:01.801701] No new deals found.
+[2025-10-25 15:53:38.874966] --- Script run started ---
+[2025-10-25 15:53:39.319710] No new deals found.
+[2025-10-25 15:56:00.681588] --- Test notification sent ---
+[2025-10-25 15:57:20.818434] --- Script run started ---
+[2025-10-25 15:57:21.248520] No new deals found.
+[2025-10-25 15:57:48.365713] --- Script run started ---
+[2025-10-25 15:57:48.817659] No new deals found.
+[2025-10-25 15:59:20.137877] --- Test notification sent ---
+[2025-10-25 15:59:47.974343] --- Test notification sent ---
+[2025-10-25 16:02:28.727030] --- Test notification sent ---
+[2025-10-25 16:05:49.420214] --- Script run started ---
+[2025-10-25 16:05:49.957189] No new deals found.
+[2025-10-25 18:51:47.967155] --- Script run started ---
+[2025-10-25 18:51:48.424947] No new deals found.
+[2025-10-25 19:46:43.997949] --- Script run started ---
+[2025-10-25 19:46:44.460321] No new deals found.
+[2025-10-25 19:47:31.088383] --- Script run started ---
+[2025-10-25 19:47:31.525561] No new deals found.
+[2025-10-25 20:06:15.685190] --- Script run started ---
+[2025-10-25 20:06:16.197693] No new deals found.
+[2025-10-25 20:22:32.761384] --- Script run started ---
+[2025-10-25 20:22:33.270233] No new deals found.
+[2025-10-26 01:40:07.748236] --- Script run started ---
+[2025-10-26 01:40:08.195784] No new deals found.
+[2025-10-26 01:42:55.590642] --- Script run started ---
+[2025-10-26 01:42:56.031815] No new deals found.
+[2025-10-26 01:45:27.513571] --- Script run started ---
+[2025-10-26 01:45:27.936572] No new deals found.
+[2025-10-26 02:08:05.852573] --- Script run started ---
+[2025-10-26 02:08:06.309137] No new deals found.
+[2025-10-26 02:09:13.825398] --- Script run started ---
+[2025-10-26 02:09:14.272474] No new deals found.
+[2025-10-26 02:11:26.728865] --- Script run started ---
+[2025-10-26 02:11:27.244850] No new deals found.
+[2025-10-26 02:17:06.569368] --- Script run started ---
+[2025-10-26 02:17:07.002824] No new deals found.
+[2025-10-26 02:21:36.307458] --- Script run started ---
+[2025-10-26 02:21:36.747365] No new deals found.
+[2025-10-26 02:26:35.290320] --- Script run started ---
+[2025-10-26 02:26:35.804878] No new deals found.
+[2025-10-26 02:31:35.500616] --- Script run started ---
+[2025-10-26 02:31:35.954600] No new deals found.
+[2025-10-26 02:36:36.254360] --- Script run started ---
+[2025-10-26 02:36:36.759019] No new deals found.
+[2025-10-26 02:41:36.139700] --- Script run started ---
+[2025-10-26 02:41:36.657021] No new deals found.
+[2025-10-26 02:46:37.132477] --- Script run started ---
+[2025-10-26 02:46:37.605898] No new deals found.
+[2025-10-26 02:51:36.264834] --- Script run started ---
+[2025-10-26 02:51:36.774043] No new deals found.
+[2025-10-26 02:56:36.289021] --- Script run started ---
+[2025-10-26 02:56:36.774735] No new deals found.
+[2025-10-26 03:01:36.033482] --- Script run started ---
+[2025-10-26 03:01:36.517195] No new deals found.
+[2025-10-26 03:06:35.788124] --- Script run started ---
+[2025-10-26 03:06:36.306355] No new deals found.
+[2025-10-26 03:11:36.259875] --- Script run started ---
+[2025-10-26 03:11:36.748858] No new deals found.
+[2025-10-26 03:16:36.072561] --- Script run started ---
+[2025-10-26 03:16:36.537353] No new deals found.
+[2025-10-26 03:21:36.266787] --- Script run started ---
+[2025-10-26 03:21:36.711799] No new deals found.
+[2025-10-26 03:26:36.167110] --- Script run started ---
+[2025-10-26 03:26:36.666581] No new deals found.
+[2025-10-26 03:31:36.250955] --- Script run started ---
+[2025-10-26 03:31:36.733851] No new deals found.
+[2025-10-26 03:36:36.215425] --- Script run started ---
+[2025-10-26 03:36:36.680675] No new deals found.
+[2025-10-26 03:41:36.297381] --- Script run started ---
+[2025-10-26 03:41:36.824993] No new deals found.
+[2025-10-26 03:46:36.285686] --- Script run started ---
+[2025-10-26 03:46:36.781988] No new deals found.
+[2025-10-26 03:51:36.532358] --- Script run started ---
+[2025-10-26 03:51:37.037604] No new deals found.
+[2025-10-26 03:56:36.317913] --- Script run started ---
+[2025-10-26 03:56:36.833398] No new deals found.
+[2025-10-26 04:01:36.230625] --- Script run started ---
+[2025-10-26 04:01:36.723713] No new deals found.
+[2025-10-26 04:06:36.248231] --- Script run started ---
+[2025-10-26 04:06:36.730528] No new deals found.
+[2025-10-26 04:11:36.407804] --- Script run started ---
+[2025-10-26 04:11:36.924528] No new deals found.
+[2025-10-26 04:16:36.285951] --- Script run started ---
+[2025-10-26 04:16:36.789296] No new deals found.
+[2025-10-26 04:21:36.292691] --- Script run started ---
+[2025-10-26 04:21:36.819627] No new deals found.
+[2025-10-26 04:26:36.035988] --- Script run started ---
+[2025-10-26 04:26:36.506265] No new deals found.
+[2025-10-26 04:31:36.265551] --- Script run started ---
+[2025-10-26 04:31:36.745280] No new deals found.
+[2025-10-26 04:36:36.147470] --- Script run started ---
+[2025-10-26 04:36:36.716020] No new deals found.
+[2025-10-26 04:41:36.184747] --- Script run started ---
+[2025-10-26 04:41:36.689176] No new deals found.
+[2025-10-26 04:46:36.240865] --- Script run started ---
+[2025-10-26 04:46:36.785354] No new deals found.
+[2025-10-26 04:51:36.319729] --- Script run started ---
+[2025-10-26 04:51:36.805541] No new deals found.
+[2025-10-26 04:56:36.418305] --- Script run started ---
+[2025-10-26 04:56:36.892713] No new deals found.
+[2025-10-26 05:01:36.461451] --- Script run started ---
+[2025-10-26 05:01:36.963719] No new deals found.
+[2025-10-26 05:06:36.433670] --- Script run started ---
+[2025-10-26 05:06:36.882844] No new deals found.
+[2025-10-26 05:11:35.736670] --- Script run started ---
+[2025-10-26 05:11:36.210446] No new deals found.
+[2025-10-26 10:37:54.766230] --- Script run started ---
+[2025-10-26 10:37:55.170033] No new deals found.
+[2025-10-26 10:41:35.980098] --- Script run started ---
+[2025-10-26 10:41:36.443773] No new deals found.
+[2025-10-26 10:46:35.954394] --- Script run started ---
+[2025-10-26 10:46:36.438360] No new deals found.
+[2025-10-26 10:51:35.985781] --- Script run started ---
+[2025-10-26 10:51:36.569409] No new deals found.
+[2025-10-26 10:56:36.003113] --- Script run started ---
+[2025-10-26 10:56:36.469032] No new deals found.
+[2025-10-26 11:01:34.995560] --- Script run started ---
+[2025-10-26 11:01:35.528381] No new deals found.
+[2025-10-26 11:06:35.001646] --- Script run started ---
+[2025-10-26 11:06:35.515409] No new deals found.
+[2025-10-26 11:11:35.018371] --- Script run started ---
+[2025-10-26 11:11:35.450906] No new deals found.
+[2025-10-26 11:16:35.015781] --- Script run started ---
+[2025-10-26 11:16:35.477096] No new deals found.
+[2025-10-26 11:21:35.027575] --- Script run started ---
+[2025-10-26 11:21:35.507223] No new deals found.
+[2025-10-26 11:26:35.026658] --- Script run started ---
+[2025-10-26 11:26:35.501734] No new deals found.
+[2025-10-26 11:31:35.033746] --- Script run started ---
+[2025-10-26 11:31:35.508006] No new deals found.
+[2025-10-26 11:36:34.997184] --- Script run started ---
+[2025-10-26 11:36:35.456653] No new deals found.
+[2025-10-26 11:41:35.063777] --- Script run started ---
+[2025-10-26 11:41:35.725471] No new deals found.
+[2025-10-26 11:46:35.053088] --- Script run started ---
+[2025-10-26 11:46:35.502077] No new deals found.
+[2025-10-26 11:51:35.068084] --- Script run started ---
+[2025-10-26 11:51:35.508063] No new deals found.
+[2025-10-26 11:56:35.074630] --- Script run started ---
+[2025-10-26 11:56:35.541538] No new deals found.
+[2025-10-26 12:01:35.093908] --- Script run started ---
+[2025-10-26 12:01:35.560291] No new deals found.
+[2025-10-26 12:06:35.095200] --- Script run started ---
+[2025-10-26 12:06:35.597020] No new deals found.
+[2025-10-26 12:11:35.067423] --- Script run started ---
+[2025-10-26 12:11:35.555623] No new deals found.
+[2025-10-26 12:16:35.081351] --- Script run started ---
+[2025-10-26 12:16:35.514053] No new deals found.
+[2025-10-26 12:21:35.124411] --- Script run started ---
+[2025-10-26 12:21:35.585110] No new deals found.
+[2025-10-26 12:26:35.123598] --- Script run started ---
+[2025-10-26 12:26:35.637268] No new deals found.
+[2025-10-26 12:31:35.130129] --- Script run started ---
+[2025-10-26 12:31:35.617978] No new deals found.
+[2025-10-26 12:36:35.097208] --- Script run started ---
+[2025-10-26 12:36:35.554412] No new deals found.
+[2025-10-26 12:41:35.160035] --- Script run started ---
+[2025-10-26 12:41:35.598838] No new deals found.
+[2025-10-26 12:46:35.164405] --- Script run started ---
+[2025-10-26 12:46:35.636673] No new deals found.
+[2025-10-26 12:51:35.194367] --- Script run started ---
+[2025-10-26 12:51:35.658676] No new deals found.
+[2025-10-26 12:56:35.203490] --- Script run started ---
+[2025-10-26 12:56:35.671848] No new deals found.
+[2025-10-26 13:01:35.193275] --- Script run started ---
+[2025-10-26 13:01:35.934162] Found 1 new deals. Notification sent.
+[2025-10-26 13:06:35.211900] --- Script run started ---
+[2025-10-26 13:06:35.671097] No new deals found.
+[2025-10-26 13:09:44.183183] --- Script run started ---
+[2025-10-26 13:09:44.644608] No new deals found.
+[2025-10-26 13:11:35.225216] --- Script run started ---
+[2025-10-26 13:11:35.678603] No new deals found.
+[2025-10-26 13:16:35.736079] --- Script run started ---
+[2025-10-26 13:16:36.846895] Found 1 new deals. Notification sent.
+[2025-10-26 13:21:36.403912] --- Script run started ---
+[2025-10-26 13:21:39.252920] Found 1 new deals. Notification sent.
+[2025-10-26 13:26:36.258690] --- Script run started ---
+[2025-10-26 13:26:36.745236] No new deals found.
+[2025-10-26 13:31:36.230299] --- Script run started ---
+[2025-10-26 13:31:36.725467] No new deals found.
+[2025-10-26 13:36:36.163918] --- Script run started ---
+[2025-10-26 13:36:36.701958] No new deals found.
+[2025-10-26 13:41:36.309643] --- Script run started ---
+[2025-10-26 13:41:36.830922] No new deals found.
+[2025-10-26 13:46:36.260928] --- Script run started ---
+[2025-10-26 13:46:36.753349] No new deals found.
+[2025-10-26 13:51:36.354379] --- Script run started ---
+[2025-10-26 13:51:36.931296] No new deals found.
+[2025-10-26 13:56:36.199166] --- Script run started ---
+[2025-10-26 13:56:37.001075] Found 1 new deals. Notification sent.
+[2025-10-26 14:01:36.252325] --- Script run started ---
+[2025-10-26 14:01:36.758449] No new deals found.
+[2025-10-26 14:06:36.892858] --- Script run started ---
+[2025-10-26 14:06:37.463052] No new deals found.
+[2025-10-26 14:11:36.427903] --- Script run started ---
+[2025-10-26 14:11:36.975871] No new deals found.
+[2025-10-26 14:16:36.420434] --- Script run started ---
+[2025-10-26 14:16:36.962869] No new deals found.
+[2025-10-26 14:21:37.070764] --- Script run started ---
+[2025-10-26 14:21:37.613759] No new deals found.
+[2025-10-26 14:26:36.299432] --- Script run started ---
+[2025-10-26 14:26:36.792112] No new deals found.
+[2025-10-26 14:31:36.472371] --- Script run started ---
+[2025-10-26 14:31:37.043853] No new deals found.
+[2025-10-26 14:36:36.801181] --- Script run started ---
+[2025-10-26 14:36:37.346968] No new deals found.
+[2025-10-26 14:41:36.950827] --- Script run started ---
+[2025-10-26 14:41:37.604725] No new deals found.
+[2025-10-26 14:46:36.851646] --- Script run started ---
+[2025-10-26 14:46:37.399206] No new deals found.
+[2025-10-26 14:51:37.539349] --- Script run started ---
+[2025-10-26 14:51:38.095033] No new deals found.
+[2025-10-26 14:56:37.179673] --- Script run started ---
+[2025-10-26 14:56:37.655121] No new deals found.
+[2025-10-26 15:01:36.764694] --- Script run started ---
+[2025-10-26 15:01:37.309924] No new deals found.
+[2025-10-26 15:06:36.862472] --- Script run started ---
+[2025-10-26 15:06:37.425679] No new deals found.
+[2025-10-26 15:11:37.185306] --- Script run started ---
+[2025-10-26 15:11:37.750196] No new deals found.
+[2025-10-26 15:16:35.874969] --- Script run started ---
+[2025-10-26 15:16:36.344324] No new deals found.
+[2025-10-26 15:21:36.821495] --- Script run started ---
+[2025-10-26 15:21:37.389970] No new deals found.
+[2025-10-26 15:26:36.885994] --- Script run started ---
+[2025-10-26 15:26:37.438109] No new deals found.
+[2025-10-26 15:31:36.952705] --- Script run started ---
+[2025-10-26 15:31:37.466923] No new deals found.
+[2025-10-26 15:36:36.831230] --- Script run started ---
+[2025-10-26 15:36:37.704070] No new deals found.
+[2025-10-26 15:41:36.951938] --- Script run started ---
+[2025-10-26 15:41:37.513187] No new deals found.
+[2025-10-26 15:46:36.478623] --- Script run started ---
+[2025-10-26 15:46:37.036904] No new deals found.
+[2025-10-26 15:51:36.898437] --- Script run started ---
+[2025-10-26 15:51:37.757382] No new deals found.
+[2025-10-26 15:56:36.665024] --- Script run started ---
+[2025-10-26 15:56:37.209079] No new deals found.
+[2025-10-26 16:01:36.902860] --- Script run started ---
+[2025-10-26 16:01:37.462136] No new deals found.
+[2025-10-26 16:06:36.793873] --- Script run started ---
+[2025-10-26 16:06:37.301926] No new deals found.
+[2025-10-26 16:11:36.678666] --- Script run started ---
+[2025-10-26 16:11:37.310734] No new deals found.
+[2025-10-26 16:16:36.839047] --- Script run started ---
+[2025-10-26 16:16:37.414371] No new deals found.
+[2025-10-26 16:21:36.360034] --- Script run started ---
+[2025-10-26 16:21:36.876451] No new deals found.
+[2025-10-26 16:26:36.618987] --- Script run started ---
+[2025-10-26 16:26:37.127402] No new deals found.
+[2025-10-26 16:31:36.594286] --- Script run started ---
+[2025-10-26 16:31:37.105814] No new deals found.
+[2025-10-26 16:36:36.368486] --- Script run started ---
+[2025-10-26 16:36:36.837916] No new deals found.
+[2025-10-26 16:41:36.090454] --- Script run started ---
+[2025-10-26 16:41:36.597386] No new deals found.
+[2025-10-26 16:46:36.009689] --- Script run started ---
+[2025-10-26 16:46:36.545839] No new deals found.
+[2025-10-26 16:51:36.016573] --- Script run started ---
+[2025-10-26 16:51:36.556749] No new deals found.
+[2025-10-26 16:56:36.024266] --- Script run started ---
+[2025-10-26 16:56:36.526947] No new deals found.
+[2025-10-26 17:01:36.002214] --- Script run started ---
+[2025-10-26 17:01:57.141211] No new deals found.
+[2025-10-26 17:06:35.598973] --- Script run started ---
+[2025-10-26 17:06:36.065147] No new deals found.
+[2025-10-26 17:11:35.584616] --- Script run started ---
+[2025-10-26 17:11:36.029441] No new deals found.
+[2025-10-26 17:16:35.715995] --- Script run started ---
+[2025-10-26 17:16:36.250577] No new deals found.
+[2025-10-26 17:21:35.656138] --- Script run started ---
+[2025-10-26 17:21:36.124778] No new deals found.
+[2025-10-26 17:26:35.660403] --- Script run started ---
+[2025-10-26 17:26:36.211102] No new deals found.
+[2025-10-26 17:31:35.643842] --- Script run started ---
+[2025-10-26 17:31:36.152129] No new deals found.
+[2025-10-26 17:36:35.718100] --- Script run started ---
+[2025-10-26 17:36:36.198505] No new deals found.
+[2025-10-26 17:41:35.675052] --- Script run started ---
+[2025-10-26 17:41:36.120818] No new deals found.
+[2025-10-26 17:46:35.669528] --- Script run started ---
+[2025-10-26 17:46:36.129835] No new deals found.
+[2025-10-26 17:51:35.653217] --- Script run started ---
+[2025-10-26 17:51:36.128699] No new deals found.
+[2025-10-26 17:56:35.668823] --- Script run started ---
+[2025-10-26 17:56:36.142410] No new deals found.
+[2025-10-26 18:01:35.655780] --- Script run started ---
+[2025-10-26 18:01:36.107368] No new deals found.
+[2025-10-26 18:06:35.695834] --- Script run started ---
+[2025-10-26 18:06:36.135382] No new deals found.
+[2025-10-26 18:11:35.680560] --- Script run started ---
+[2025-10-26 18:11:36.166387] No new deals found.
+[2025-10-26 18:16:35.709183] --- Script run started ---
+[2025-10-26 18:16:36.160615] No new deals found.
+[2025-10-26 18:21:35.736467] --- Script run started ---
+[2025-10-26 18:21:36.908906] No new deals found.
+[2025-10-26 18:26:35.702653] --- Script run started ---
+[2025-10-26 18:26:36.189181] No new deals found.
+[2025-10-26 18:31:35.722865] --- Script run started ---
+[2025-10-26 18:31:36.220434] No new deals found.
+[2025-10-26 18:36:35.744558] --- Script run started ---
+[2025-10-26 18:36:36.205680] No new deals found.
+[2025-10-26 18:41:35.749544] --- Script run started ---
+[2025-10-26 18:41:36.512717] No new deals found.
+[2025-10-26 18:46:35.719165] --- Script run started ---
+[2025-10-26 18:46:36.171356] No new deals found.
+[2025-10-26 18:51:35.953703] --- Script run started ---
+[2025-10-26 18:51:36.456588] No new deals found.
+[2025-10-26 18:56:35.810491] --- Script run started ---
+[2025-10-26 18:56:36.269478] No new deals found.
+[2025-10-26 19:01:35.876709] --- Script run started ---
+[2025-10-26 19:01:36.352522] No new deals found.
+[2025-10-26 19:06:35.807431] --- Script run started ---
+[2025-10-26 19:06:36.318431] No new deals found.
+[2025-10-26 19:11:35.943082] --- Script run started ---
+[2025-10-26 19:11:36.414668] No new deals found.
+[2025-10-26 19:16:35.816674] --- Script run started ---
+[2025-10-26 19:16:36.255876] No new deals found.
+[2025-10-26 19:21:35.868670] --- Script run started ---
+[2025-10-26 19:21:36.312966] No new deals found.
+[2025-10-26 19:26:35.977867] --- Script run started ---
+[2025-10-26 19:26:36.500196] No new deals found.
+[2025-10-26 19:31:35.955595] --- Script run started ---
+[2025-10-26 19:31:36.515887] No new deals found.
+[2025-10-26 19:36:35.949055] --- Script run started ---
+[2025-10-26 19:36:36.396368] No new deals found.
+[2025-10-26 19:41:35.978542] --- Script run started ---
+[2025-10-26 19:41:36.425712] No new deals found.
+[2025-10-26 19:46:35.998830] --- Script run started ---
+[2025-10-26 19:46:36.535764] No new deals found.
+[2025-10-26 19:51:36.051014] --- Script run started ---
+[2025-10-26 19:51:36.537652] No new deals found.
+[2025-10-26 19:56:35.881942] --- Script run started ---
+[2025-10-26 19:56:36.347577] No new deals found.
+[2025-10-26 20:01:36.005138] --- Script run started ---
+[2025-10-26 20:01:36.495863] No new deals found.
+[2025-10-26 20:06:36.040951] --- Script run started ---
+[2025-10-26 20:06:36.519591] No new deals found.
+[2025-10-26 20:11:36.060202] --- Script run started ---
+[2025-10-26 20:11:36.590180] No new deals found.
+[2025-10-26 20:16:36.088801] --- Script run started ---
+[2025-10-26 20:16:36.546871] No new deals found.
+[2025-10-26 20:21:36.074238] --- Script run started ---
+[2025-10-26 20:21:36.539010] No new deals found.
+[2025-10-26 20:26:36.037342] --- Script run started ---
+[2025-10-26 20:26:36.597031] No new deals found.
+[2025-10-26 20:31:36.059568] --- Script run started ---
+[2025-10-26 20:31:36.551772] No new deals found.
+[2025-10-26 20:36:36.043511] --- Script run started ---
+[2025-10-26 20:36:36.483578] No new deals found.
+[2025-10-26 20:41:36.057571] --- Script run started ---
+[2025-10-26 20:41:36.602454] No new deals found.
+[2025-10-26 20:46:36.059774] --- Script run started ---
+[2025-10-26 20:46:36.492716] No new deals found.
+[2025-10-26 20:51:36.061073] --- Script run started ---
+[2025-10-26 20:51:36.093906] No new deals found.
+[2025-10-26 20:56:36.056959] --- Script run started ---
+[2025-10-26 20:56:36.088426] No new deals found.
+[2025-10-26 21:01:36.051390] --- Script run started ---
+[2025-10-26 21:01:36.084708] No new deals found.
+[2025-10-26 21:06:36.054560] --- Script run started ---
+[2025-10-26 21:06:36.086573] No new deals found.
+[2025-10-26 21:11:36.097299] --- Script run started ---
+[2025-10-26 21:11:36.540551] No new deals found.
+[2025-10-26 21:16:36.128152] --- Script run started ---
+[2025-10-26 21:16:36.599677] No new deals found.
+[2025-10-26 21:21:36.135106] --- Script run started ---
+[2025-10-26 21:21:36.598515] No new deals found.
+[2025-10-26 21:26:36.188474] --- Script run started ---
+[2025-10-26 21:26:36.691318] No new deals found.
+[2025-10-26 21:31:35.119994] --- Script run started ---
+[2025-10-26 21:31:35.601467] No new deals found.
+[2025-10-26 21:36:35.063509] --- Script run started ---
+[2025-10-26 21:36:35.486137] No new deals found.
+[2025-10-26 21:41:35.183976] --- Script run started ---
+[2025-10-26 21:41:35.612173] No new deals found.
+[2025-10-26 21:46:35.187475] --- Script run started ---
+[2025-10-26 21:46:35.633024] No new deals found.
+[2025-10-26 21:51:35.196900] --- Script run started ---
+[2025-10-26 21:51:35.670262] No new deals found.
+[2025-10-26 21:56:35.180219] --- Script run started ---
+[2025-10-26 21:56:35.764896] No new deals found.
+[2025-10-26 22:01:35.226843] --- Script run started ---
+[2025-10-26 22:01:35.678575] No new deals found.
+[2025-10-26 22:06:35.218404] --- Script run started ---
+[2025-10-26 22:06:35.683778] No new deals found.
+[2025-10-26 22:11:35.251979] --- Script run started ---
+[2025-10-26 22:11:35.676779] No new deals found.
+[2025-10-26 22:16:35.259377] --- Script run started ---
+[2025-10-26 22:16:35.739372] No new deals found.
+[2025-10-26 22:21:35.194506] --- Script run started ---
+[2025-10-26 22:21:35.630988] No new deals found.
+[2025-10-26 22:26:35.139646] --- Script run started ---
+[2025-10-26 22:26:35.554956] No new deals found.
+[2025-10-26 22:31:35.152316] --- Script run started ---
+[2025-10-26 22:31:35.604481] No new deals found.
+[2025-10-26 22:36:35.432048] --- Script run started ---
+[2025-10-26 22:36:35.894671] No new deals found.
+[2025-10-26 22:41:35.271849] --- Script run started ---
+[2025-10-26 22:41:35.759554] No new deals found.
+[2025-10-26 22:46:35.311366] --- Script run started ---
+[2025-10-26 22:46:35.735103] No new deals found.
+[2025-10-26 22:51:35.291168] --- Script run started ---
+[2025-10-26 22:51:35.774744] No new deals found.
+[2025-10-26 22:56:35.359968] --- Script run started ---
+[2025-10-26 22:56:35.843418] No new deals found.
+[2025-10-26 23:01:35.307456] --- Script run started ---
+[2025-10-26 23:01:35.754345] No new deals found.
+[2025-10-26 23:06:35.339338] --- Script run started ---
+[2025-10-26 23:06:35.809741] No new deals found.
+[2025-10-26 23:11:35.220797] --- Script run started ---
+[2025-10-26 23:11:35.659058] No new deals found.
+[2025-10-26 23:16:35.316431] --- Script run started ---
+[2025-10-26 23:16:35.793737] No new deals found.
+[2025-10-26 23:21:35.296153] --- Script run started ---
+[2025-10-26 23:21:36.085233] No new deals found.
+[2025-10-26 23:26:35.340114] --- Script run started ---
+[2025-10-26 23:26:35.761799] No new deals found.
+[2025-10-26 23:31:35.323430] --- Script run started ---
+[2025-10-26 23:31:35.778617] No new deals found.
+[2025-10-26 23:36:35.343858] --- Script run started ---
+[2025-10-26 23:36:35.865246] No new deals found.
+[2025-10-26 23:41:35.400823] --- Script run started ---
+[2025-10-26 23:41:35.870371] No new deals found.
+[2025-10-26 23:46:35.414103] --- Script run started ---
+[2025-10-26 23:46:35.914069] No new deals found.
+[2025-10-26 23:51:35.444073] --- Script run started ---
+[2025-10-26 23:51:35.905024] No new deals found.
+[2025-10-26 23:56:35.425317] --- Script run started ---
+[2025-10-26 23:56:35.923618] No new deals found.
+[2025-10-27 00:01:35.511926] --- Script run started ---
+[2025-10-27 00:01:35.991588] No new deals found.
+[2025-10-27 00:06:35.427779] --- Script run started ---
+[2025-10-27 00:06:35.833324] No new deals found.
+[2025-10-27 00:11:35.572744] --- Script run started ---
+[2025-10-27 00:11:36.051516] No new deals found.
+[2025-10-27 00:16:35.319382] --- Script run started ---
+[2025-10-27 00:16:35.779610] No new deals found.
+[2025-10-27 00:21:35.546957] --- Script run started ---
+[2025-10-27 00:21:36.005735] No new deals found.
+[2025-10-27 00:26:35.639822] --- Script run started ---
+[2025-10-27 00:26:36.088688] No new deals found.
+[2025-10-27 00:31:35.622215] --- Script run started ---
+[2025-10-27 00:31:36.100439] No new deals found.
+[2025-10-27 00:36:35.541406] --- Script run started ---
+[2025-10-27 00:36:35.956647] No new deals found.
+[2025-10-27 00:41:35.574588] --- Script run started ---
+[2025-10-27 00:41:36.018514] No new deals found.
+[2025-10-27 00:46:35.554634] --- Script run started ---
+[2025-10-27 00:46:36.010130] No new deals found.
+[2025-10-27 00:51:35.612148] --- Script run started ---
+[2025-10-27 00:51:36.116587] No new deals found.
+[2025-10-27 00:56:35.630337] --- Script run started ---
+[2025-10-27 00:56:36.038909] No new deals found.
+[2025-10-27 01:01:35.679057] --- Script run started ---
+[2025-10-27 01:01:36.173386] No new deals found.
+[2025-10-27 01:06:35.664830] --- Script run started ---
+[2025-10-27 01:06:36.128230] No new deals found.
+[2025-10-27 01:11:35.448739] --- Script run started ---
+[2025-10-27 01:11:35.906047] No new deals found.
+[2025-10-27 01:16:36.422271] --- Script run started ---
+[2025-10-27 01:16:36.925005] No new deals found.
+[2025-10-27 01:21:35.512336] --- Script run started ---
+[2025-10-27 01:21:35.987040] No new deals found.
+[2025-10-27 01:26:35.449879] --- Script run started ---
+[2025-10-27 01:26:35.902832] No new deals found.
+[2025-10-27 01:31:35.475361] --- Script run started ---
+[2025-10-27 01:31:35.971030] No new deals found.
+[2025-10-27 01:36:35.461211] --- Script run started ---
+[2025-10-27 01:36:35.915037] No new deals found.
+[2025-10-27 01:41:35.486174] --- Script run started ---
+[2025-10-27 01:41:35.984184] No new deals found.
+[2025-10-27 01:46:35.474741] --- Script run started ---
+[2025-10-27 01:46:35.925943] No new deals found.
+[2025-10-27 01:51:35.465470] --- Script run started ---
+[2025-10-27 01:51:35.875171] No new deals found.
+[2025-10-27 01:56:35.494723] --- Script run started ---
+[2025-10-27 01:56:35.928560] No new deals found.
+[2025-10-27 02:01:35.583333] --- Script run started ---
+[2025-10-27 02:01:36.019457] No new deals found.
+[2025-10-27 02:06:35.610493] --- Script run started ---
+[2025-10-27 02:06:36.462300] No new deals found.
+[2025-10-27 02:11:35.934550] --- Script run started ---
+[2025-10-27 02:11:36.474640] No new deals found.
+[2025-10-27 02:16:35.505141] --- Script run started ---
+[2025-10-27 02:16:36.017243] No new deals found.
+[2025-10-27 02:21:36.576791] --- Script run started ---
+[2025-10-27 02:21:37.049561] No new deals found.
+[2025-10-27 02:26:36.505549] --- Script run started ---
+[2025-10-27 02:26:36.978818] No new deals found.
+[2025-10-27 02:31:36.438619] --- Script run started ---
+[2025-10-27 02:31:36.942238] No new deals found.
+[2025-10-27 02:36:36.434243] --- Script run started ---
+[2025-10-27 02:36:37.022372] No new deals found.
+[2025-10-27 02:41:36.452417] --- Script run started ---
+[2025-10-27 02:41:36.960763] No new deals found.
+[2025-10-27 02:46:36.435225] --- Script run started ---
+[2025-10-27 02:46:36.897508] No new deals found.
+[2025-10-27 02:51:35.958824] --- Script run started ---
+[2025-10-27 02:51:36.499810] No new deals found.
+[2025-10-27 02:56:35.953423] --- Script run started ---
+[2025-10-27 02:56:36.429123] No new deals found.
+[2025-10-27 12:49:44.342384] --- Script run started ---
+[2025-10-27 12:49:45.242766] Found 2 new deals. Notification sent.
+[2025-10-27 12:51:37.012372] --- Script run started ---
+[2025-10-27 12:51:37.502748] No new deals found.
+[2025-10-27 12:56:36.105337] --- Script run started ---
+[2025-10-27 12:56:36.528643] No new deals found.
+[2025-10-27 13:01:36.120523] --- Script run started ---
+[2025-10-27 13:01:36.573007] No new deals found.
+[2025-10-27 13:06:36.070297] --- Script run started ---
+[2025-10-27 13:06:36.476916] No new deals found.
+[2025-10-27 13:11:35.026238] --- Script run started ---
+[2025-10-27 13:11:35.577012] No new deals found.
+[2025-10-27 13:16:35.050512] --- Script run started ---
+[2025-10-27 13:16:35.503209] No new deals found.
+[2025-10-27 13:21:35.034948] --- Script run started ---
+[2025-10-27 13:21:35.460950] No new deals found.
+[2025-10-27 13:26:35.044852] --- Script run started ---
+[2025-10-27 13:26:35.495387] No new deals found.
+[2025-10-27 13:31:35.112009] --- Script run started ---
+[2025-10-27 13:31:35.581386] No new deals found.
+[2025-10-27 13:36:35.098149] --- Script run started ---
+[2025-10-27 13:36:35.583653] No new deals found.
+[2025-10-27 13:41:35.098941] --- Script run started ---
+[2025-10-27 13:41:35.554241] No new deals found.
+[2025-10-27 13:46:35.079699] --- Script run started ---
+[2025-10-27 13:46:35.813091] Found 1 new deals. Notification sent.
+[2025-10-27 13:51:35.111337] --- Script run started ---
+[2025-10-27 13:51:35.565354] No new deals found.
+[2025-10-27 13:56:35.139143] --- Script run started ---
+[2025-10-27 13:56:35.549002] No new deals found.
+[2025-10-27 14:01:35.204610] --- Script run started ---
+[2025-10-27 14:01:35.713873] No new deals found.
+[2025-10-27 14:06:35.171570] --- Script run started ---
+[2025-10-27 14:06:35.621289] No new deals found.
+[2025-10-27 14:11:35.195346] --- Script run started ---
+[2025-10-27 14:11:35.683678] No new deals found.
+[2025-10-27 14:16:35.175123] --- Script run started ---
+[2025-10-27 14:16:35.682975] No new deals found.
+[2025-10-27 14:21:35.170218] --- Script run started ---
+[2025-10-27 14:21:35.630828] No new deals found.
+[2025-10-27 14:26:35.190941] --- Script run started ---
+[2025-10-27 14:26:35.706922] No new deals found.
+[2025-10-27 14:31:35.211158] --- Script run started ---
+[2025-10-27 14:31:35.700240] No new deals found.
+[2025-10-27 14:36:35.196751] --- Script run started ---
+[2025-10-27 14:36:35.717898] No new deals found.
+[2025-10-27 14:41:35.221178] --- Script run started ---
+[2025-10-27 14:41:35.738761] No new deals found.
+[2025-10-27 14:46:35.196269] --- Script run started ---
+[2025-10-27 14:46:35.715663] No new deals found.
+[2025-10-27 14:51:35.261054] --- Script run started ---
+[2025-10-27 14:51:35.788761] No new deals found.
+[2025-10-27 14:56:35.333995] --- Script run started ---
+[2025-10-27 14:56:35.834875] No new deals found.
+[2025-10-27 15:01:35.264666] --- Script run started ---
+[2025-10-27 15:01:35.781859] No new deals found.
+[2025-10-27 15:06:35.289445] --- Script run started ---
+[2025-10-27 15:06:36.364456] No new deals found.
+[2025-10-27 15:11:35.229379] --- Script run started ---
+[2025-10-27 15:11:35.738709] No new deals found.
+[2025-10-27 15:16:35.278943] --- Script run started ---
+[2025-10-27 15:16:35.723074] No new deals found.
+[2025-10-27 15:21:35.270593] --- Script run started ---
+[2025-10-27 15:21:35.754032] No new deals found.
+[2025-10-27 15:26:35.288667] --- Script run started ---
+[2025-10-27 15:26:35.757505] No new deals found.
+[2025-10-27 15:31:35.310566] --- Script run started ---
+[2025-10-27 15:31:35.835972] No new deals found.
+[2025-10-27 15:36:35.306130] --- Script run started ---
+[2025-10-27 15:36:35.757890] No new deals found.
+[2025-10-27 15:41:35.314295] --- Script run started ---
+[2025-10-27 15:41:35.820121] No new deals found.
+[2025-10-27 15:46:35.343251] --- Script run started ---
+[2025-10-27 15:46:35.828053] No new deals found.
+[2025-10-27 15:51:35.415543] --- Script run started ---
+[2025-10-27 15:51:35.883465] No new deals found.
+[2025-10-27 15:56:35.358878] --- Script run started ---
+[2025-10-27 15:56:35.885600] No new deals found.
+[2025-10-27 16:01:35.369043] --- Script run started ---
+[2025-10-27 16:01:35.860098] No new deals found.
+[2025-10-27 16:06:35.352343] --- Script run started ---
+[2025-10-27 16:06:35.869449] No new deals found.
+[2025-10-27 16:11:35.368068] --- Script run started ---
+[2025-10-27 16:11:35.901501] No new deals found.
+[2025-10-27 16:16:35.380111] --- Script run started ---
+[2025-10-27 16:16:35.820350] No new deals found.
+[2025-10-27 16:21:35.360918] --- Script run started ---
+[2025-10-27 16:21:35.819832] No new deals found.
+[2025-10-27 16:26:35.397302] --- Script run started ---
+[2025-10-27 16:26:35.869088] No new deals found.
+[2025-10-27 16:31:35.393251] --- Script run started ---
+[2025-10-27 16:31:35.864338] No new deals found.
+[2025-10-27 16:36:35.378236] --- Script run started ---
+[2025-10-27 16:36:35.862558] No new deals found.
+[2025-10-27 16:41:35.411407] --- Script run started ---
+[2025-10-27 16:41:35.866489] No new deals found.
+[2025-10-27 16:46:35.383807] --- Script run started ---
+[2025-10-27 16:46:35.974566] No new deals found.
+[2025-10-27 16:51:35.397633] --- Script run started ---
+[2025-10-27 16:51:35.905008] No new deals found.
+[2025-10-27 16:56:35.380615] --- Script run started ---
+[2025-10-27 16:56:35.819821] No new deals found.
+[2025-10-27 17:01:35.431637] --- Script run started ---
+[2025-10-27 17:01:35.922757] No new deals found.
+[2025-10-27 17:06:35.424438] --- Script run started ---
+[2025-10-27 17:06:35.932742] No new deals found.
+[2025-10-27 17:11:35.442610] --- Script run started ---
+[2025-10-27 17:11:35.937748] No new deals found.
+[2025-10-27 17:16:35.460842] --- Script run started ---
+[2025-10-27 17:16:35.928570] No new deals found.
+[2025-10-27 17:21:35.437157] --- Script run started ---
+[2025-10-27 17:21:35.916208] No new deals found.
+[2025-10-27 17:26:35.989122] --- Script run started ---
+[2025-10-27 17:26:36.497320] No new deals found.
+[2025-10-27 17:31:35.511206] --- Script run started ---
+[2025-10-27 17:31:36.003229] No new deals found.

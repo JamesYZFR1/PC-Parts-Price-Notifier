@@ -1,0 +1,54 @@
+name: PC Parts Price Notifier
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"  # every 5 minutes (best-effort)
+
+permissions:
+  contents: write  # allow committing updated seen_posts.txt
+
+concurrency:
+  group: deal-notifier
+  cancel-in-progress: true
+
+jobs:
+  run-notifier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install feedparser apprise
+
+      - name: Run notifier
+        env:
+          APPRISE_URLS: ${{ secrets.APPRISE_URLS }} # comma-separated, e.g. https://discord.com/api/webhooks/...,pb://...
+          ROLE_MENTION: ${{ secrets.ROLE_MENTION }}
+          FEED_URL: https://www.reddit.com/r/bapcsalescanada/.rss
+          SEEN_FILE: seen_posts.txt
+          LOG_FILE: run_log.txt
+        run: |
+          python pc_parts_price_notifier.py
+
+      - name: Commit seen_posts.txt if updated
+        run: |
+          if git diff --quiet --exit-code -- seen_posts.txt; then
+            echo "No changes to seen_posts.txt"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add seen_posts.txt
+            git commit -m "chore: update seen posts [skip ci]"
+            git push
+          fi
