@@ -69,6 +69,17 @@ State and logs:
 - The workflow commits updates to `seen_posts.txt` back to the repository so the bot won’t re-alert on the same posts.
 - The local `run_log.txt` on your PC will NOT update when the workflow runs in the cloud. Instead, each run uploads the workflow's `run_log.txt` as a downloadable artifact named `run_log` (kept for 14 days). Open a workflow run → Artifacts to download.
 
+## Avoid local Git conflicts
+
+When you run the script locally, it may update `seen_posts.txt` and `run_log.txt`. Since the GitHub Actions workflow also updates `seen_posts.txt`, this can cause push/pull conflicts.
+
+To avoid that, the provided batch files set environment variables so local runs use separate files:
+
+- `SEEN_FILE=local_seen_posts.txt`
+- `LOG_FILE=local_run_log.txt`
+
+These local files are ignored by Git (see `.gitignore`), so your local testing won’t conflict with the cloud workflow’s tracked files.
+
 Notes:
 - GitHub’s cron is best-effort and roughly every 5 minutes at minimum.
 - If you prefer not to commit state, switch to a Gist or S3/DB storage and update the script accordingly.

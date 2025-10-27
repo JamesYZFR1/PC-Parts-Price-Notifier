@@ -1,0 +1,7 @@
+# Local-only files used when running on your PC
+local_run_log.txt
+local_seen_posts.txt
+
+# IDE/editor folders
+.vscode/
+*.code-workspace
