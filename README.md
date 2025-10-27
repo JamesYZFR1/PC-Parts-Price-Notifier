@@ -65,8 +65,9 @@ Setup:
 	- `ROLE_MENTION` – optional Discord role mention like `<@&123456789012345678>`
 - Push this repo to GitHub. The workflow will run automatically on schedule and can be triggered manually via "Run workflow".
 
-State persistence:
+State and logs:
 - The workflow commits updates to `seen_posts.txt` back to the repository so the bot won’t re-alert on the same posts.
+- The local `run_log.txt` on your PC will NOT update when the workflow runs in the cloud. Instead, each run uploads the workflow's `run_log.txt` as a downloadable artifact named `run_log` (kept for 14 days). Open a workflow run → Artifacts to download.
 
 Notes:
 - GitHub’s cron is best-effort and roughly every 5 minutes at minimum.

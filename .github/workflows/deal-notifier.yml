@@ -41,6 +41,14 @@ jobs:
         run: |
           python pc_parts_price_notifier.py
 
+      - name: Upload run log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run_log
+          path: run_log.txt
+          retention-days: 14
+
       - name: Commit seen_posts.txt if updated
         run: |
           if git diff --quiet --exit-code -- seen_posts.txt; then
