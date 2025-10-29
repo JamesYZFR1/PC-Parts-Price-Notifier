@@ -21,7 +21,7 @@ The script will notify you for:
 4. **Monitors under $1000** - Detects posts containing the word "monitor"
 5. **Specific CPU models** - Always alerts for: 5800X3D, 7600X3D, 7800X3D (if price is under $500)
 
-Additionally, the notifier checks the r/CanadianHardwareSwap feed and alerts on titles containing any of these GPU models (case/spacing variations supported):
+Additionally, the notifier checks the r/CanadianHardwareSwap feed and alerts on titles containing any of these GPU models (case/spacing variations supported). It will only alert if the model appears in the [H] (Have) portion of the title and will ignore matches that appear only in the [W] (Want) portion:
 
 - RTX 5090, 5090
 - RTX 4090, 4090

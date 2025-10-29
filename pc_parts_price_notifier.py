@@ -281,10 +281,33 @@ for entry in chs_feed.entries:
 
     title_lower = title.lower()
 
-    match_label = extract_first_match(title_lower, chs_keyword_labels_and_regexes)
+    # Only match when the keyword appears under the [H] (Have) section, not [W] (Want).
+    # We'll locate [H] and [W] (case-insensitive) and search only within the [H] segment.
+    def _index_of_tag(s: str, tag: str) -> int:
+        try:
+            return s.index(tag)
+        except ValueError:
+            return -1
+
+    idx_h = _index_of_tag(title_lower, "[h]")
+    idx_w = _index_of_tag(title_lower, "[w]")
+
+    # Derive the H segment of the title: content after [H] up to [W] (if [W] comes after [H]).
+    h_segment = ""
+    if idx_h != -1:
+        if idx_w != -1 and idx_w > idx_h:
+            h_segment = title_lower[idx_h:idx_w]
+        else:
+            h_segment = title_lower[idx_h:]
+
+    # If there is no [H], we do not alert (strict interpretation per request).
+    if not h_segment:
+        continue
+
+    match_label = extract_first_match(h_segment, chs_keyword_labels_and_regexes)
     if match_label:
-        # CanadianHardwareSwap posts usually do not include clear prices; we alert on keyword match.
-        new_matches.append((title, entry.link, f"CHS match: {match_label}"))
+        # Alert only when the keyword appears under [H].
+        new_matches.append((title, entry.link, f"CHS match (H): {match_label}"))
         seen_posts.add(post_id)
 
 # --- SEND ALERTS ---
