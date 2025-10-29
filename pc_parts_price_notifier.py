@@ -146,6 +146,17 @@ def extract_price(title):
         return int(money_matches[-1].replace(",", ""))
 
     return None
+# PSU helpers
+_RX_1000W = re.compile(r"(?<!\d)1[, ]?000\s*w\b", re.IGNORECASE)
+_RX_1KW = re.compile(r"\b1\s*k\s*w\b|\b1kw\b", re.IGNORECASE)
+
+def has_1000w_psu(text: str) -> bool:
+    """Return True if text mentions a PSU/power supply and 1000W (or 1kW)."""
+    t = text.lower()
+    mentions_psu = ("psu" in t) or ("power supply" in t)
+    mentions_1000w = bool(_RX_1000W.search(t) or _RX_1KW.search(t))
+    return mentions_psu and mentions_1000w
+
 
 
 def extract_first_match(text: str, patterns: list[str]) -> str | None:
@@ -242,6 +253,14 @@ for entry in bapc_feed.entries:
             new_matches.append((title, entry.link, f"Monitor ${price}"))
             alerted = True
 
+    # PSU 1000W: alert when title mentions PSU (or power supply) and 1000W (or 1kW)
+    if (not alerted) and has_1000w_psu(title_lower):
+        reason = "PSU 1000W"
+        if price is not None:
+            reason += f" ${price}"
+        new_matches.append((title, entry.link, reason))
+        alerted = True
+
     # Mark post as seen only if we alerted (so skipped posts can be re-evaluated later)
     if alerted:
         seen_posts.add(post_id)
@@ -304,11 +323,20 @@ for entry in chs_feed.entries:
     if not h_segment:
         continue
 
+    alerted_chs = False
+
     match_label = extract_first_match(h_segment, chs_keyword_labels_and_regexes)
-    if match_label:
+    if match_label and not alerted_chs:
         # Alert only when the keyword appears under [H].
         new_matches.append((title, entry.link, f"CHS match (H): {match_label}"))
         seen_posts.add(post_id)
+        alerted_chs = True
+
+    # Also detect 1000W PSU in [H]
+    if (not alerted_chs) and has_1000w_psu(h_segment):
+        new_matches.append((title, entry.link, "CHS match (H): 1000W PSU"))
+        seen_posts.add(post_id)
+        alerted_chs = True
 
 # --- SEND ALERTS ---
 # If dry-run, print a human-readable list and avoid sending or marking side effects.

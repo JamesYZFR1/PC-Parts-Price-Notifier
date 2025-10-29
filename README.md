@@ -3,7 +3,7 @@
 This script monitors:
 
 - /r/bapcsalescanada RSS feed for price-based PC parts deals
-- /r/CanadianHardwareSwap RSS feed for high-end GPU keyword matches (regardless of price)
+- /r/CanadianHardwareSwap RSS feed for high-end GPU keyword matches (regardless of price) and 1000W PSU in [H]
 
 ## Quick Start Batch Files
 
@@ -21,7 +21,7 @@ The script will notify you for:
 4. **Monitors under $1000** - Detects posts containing the word "monitor"
 5. **Specific CPU models** - Always alerts for: 5800X3D, 7600X3D, 7800X3D (if price is under $500)
 
-Additionally, the notifier checks the r/CanadianHardwareSwap feed and alerts on titles containing any of these GPU models (case/spacing variations supported). It will only alert if the model appears in the [H] (Have) portion of the title and will ignore matches that appear only in the [W] (Want) portion:
+Additionally, the notifier checks the r/CanadianHardwareSwap feed and alerts on titles containing any of these GPU models (case/spacing variations supported). It will only alert if the model appears in the [H] (Have) portion of the title and will ignore matches that appear only in the [W] (Want) portion. The same [H]-only rule applies for a 1000W PSU match:
 
 - RTX 5090, 5090
 - RTX 4090, 4090
@@ -30,6 +30,11 @@ Additionally, the notifier checks the r/CanadianHardwareSwap feed and alerts on 
 - RX 7900 XTX, 7900 XTX
 - RX 7900 XT, 7900 XT
 - RX 9070 XT, 9070 XT, RX 9070
+
+PSU alerts:
+
+- bapcsalescanada: alerts when a title mentions PSU or power supply and 1000W (or 1kW)
+- CanadianHardwareSwap: alerts only when 1000W PSU appears under [H]; ignored if only under [W]
 
 ## Configuration
 
