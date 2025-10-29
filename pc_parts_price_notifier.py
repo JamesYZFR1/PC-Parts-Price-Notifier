@@ -4,6 +4,7 @@ import feedparser
 import apprise
 import datetime
 import sys
+from zoneinfo import ZoneInfo
 
 r"""
 PC Parts Price Notifier
@@ -36,6 +37,8 @@ Run examples (PowerShell):
 
 # --- CONFIG ---
 FEED_URL = os.getenv("FEED_URL", "https://www.reddit.com/r/bapcsalescanada/.rss")
+# Additional marketplace feed: r/CanadianHardwareSwap (old.reddit RSS)
+CHS_FEED_URL = os.getenv("CHS_FEED_URL", "https://old.reddit.com/r/CanadianHardwareSwap/.rss")
 # Thresholds and keywords
 GPU_PRICE_LIMIT = 2000
 MONITOR_PRICE_LIMIT = 1000
@@ -52,6 +55,7 @@ SEEN_FILE = os.getenv("SEEN_FILE", "seen_posts.txt")
 # Note: The webhook's bot/user must have permission to @mention that role.
 ROLE_MENTION = os.getenv("ROLE_MENTION", "<@&1431577185558331404>")
 LOG_FILE = os.getenv("LOG_FILE", "run_log.txt")
+TIMEZONE = os.getenv("TIMEZONE", "UTC")  # e.g., "America/Toronto", "America/Vancouver", "UTC"
 
 # Add your Apprise URL(s) here
 # APPRISE_URLS can be supplied via env var APPRISE_URLS (comma-separated)
@@ -71,6 +75,20 @@ notifier = apprise.Apprise()
 for url in APPRISE_URLS:
     notifier.add(url)
 
+# --- TIME/LOG HELPERS ---
+def _now_local():
+    """Return timezone-aware datetime using TIMEZONE env var, fallback to UTC."""
+    try:
+        return datetime.datetime.now(ZoneInfo(TIMEZONE))
+    except Exception:
+        # On invalid timezone value, fall back to UTC
+        return datetime.datetime.now(datetime.timezone.utc)
+
+def log(message: str) -> None:
+    ts = _now_local().isoformat(timespec="seconds")
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(f"[{ts}] {message}\n")
+
 # --- HANDLE TEST NOTIFICATION ---
 if "--test" in sys.argv:
     print("Sending a test notification...")
@@ -83,16 +101,14 @@ if "--test" in sys.argv:
         body=test_message
     )
     print("✅ Test notification sent!")
-    with open(LOG_FILE, "a", encoding="utf-8") as f:
-        f.write(f"[{datetime.datetime.now()}] --- Test notification sent ---\n")
+    log("--- Test notification sent ---")
     sys.exit() # Exit after sending the test message
 
 # --- CHECK FOR DRY RUN MODE ---
 dry_run_mode = "--dry-run" in sys.argv
 
 # --- LOG SCRIPT START ---
-with open(LOG_FILE, "a", encoding="utf-8") as f:
-    f.write(f"[{datetime.datetime.now()}] --- Script run started ---\n")
+log("--- Script run started ---")
 
 # --- LOAD PREVIOUSLY SEEN POSTS ---
 if os.path.exists(SEEN_FILE):
@@ -101,10 +117,12 @@ if os.path.exists(SEEN_FILE):
 else:
     seen_posts = set()
 
-# --- FETCH FEED ---
-feed = feedparser.parse(FEED_URL)
-
 new_matches = []
+
+# --- HELPERS ---
+def normalize_text(s: str) -> str:
+    """Lowercase and strip all non-alphanumeric characters to simplify matching."""
+    return re.sub(r"[^a-z0-9]", "", s.lower())
 
 def extract_price(title):
     """Extract a sensible price from a post title.
@@ -129,7 +147,26 @@ def extract_price(title):
     return None
 
 
-for entry in feed.entries:
+def extract_first_match(text: str, patterns: list[str]) -> str | None:
+    """Return the first human-readable pattern label that matches the given text.
+
+    "patterns" items can be tuples (label, compiled_regex) or strings (interpreted as regex with word-ish boundaries).
+    Returns the label (string) of the first match, or None if no match.
+    """
+    for item in patterns:
+        if isinstance(item, tuple):
+            label, rx = item
+            if rx.search(text):
+                return label
+        else:
+            if re.search(item, text):
+                return item
+    return None
+
+
+# --- PROCESS BAPCSALESCANADA FEED (price-based filters) ---
+bapc_feed = feedparser.parse(FEED_URL)
+for entry in bapc_feed.entries:
     post_id = entry.get("id", entry.get("link"))
     title = entry.get("title", "")
 
@@ -141,7 +178,7 @@ for entry in feed.entries:
 
     # Normalize title for model/keyword checks
     title_lower = title.lower()
-    normalized = re.sub(r"[^a-z0-9]", "", title_lower)
+    normalized = normalize_text(title_lower)
 
     alerted = False
 
@@ -208,6 +245,47 @@ for entry in feed.entries:
     if alerted:
         seen_posts.add(post_id)
 
+# --- PROCESS r/CanadianHardwareSwap FEED (keyword-only GPU hunt) ---
+# We only look for specific high-end GPU model keywords, regardless of price.
+chs_feed = feedparser.parse(CHS_FEED_URL)
+
+# Build robust regex patterns that allow optional vendor prefixes and flexible spacing/hyphens.
+# We'll match case-insensitively using normalized comparisons where needed.
+chs_keyword_labels_and_regexes = [
+    ("RTX 5090", re.compile(r"\brtx\s*-?\s*5090\b", re.IGNORECASE)),
+    ("5090", re.compile(r"(?<!\d)5090(?!\d)", re.IGNORECASE)),
+    ("RTX 4090", re.compile(r"\brtx\s*-?\s*4090\b", re.IGNORECASE)),
+    ("4090", re.compile(r"(?<!\d)4090(?!\d)", re.IGNORECASE)),
+    ("RTX 4080 SUPER", re.compile(r"\brtx\s*-?\s*4080\s*-?\s*super\b", re.IGNORECASE)),
+    ("4080 SUPER", re.compile(r"\b4080\s*-?\s*super\b", re.IGNORECASE)),
+    ("RTX 4080", re.compile(r"\brtx\s*-?\s*4080\b", re.IGNORECASE)),
+    ("4080", re.compile(r"(?<!\d)4080(?!\d)", re.IGNORECASE)),
+    ("RTX 5070 Ti", re.compile(r"\brtx\s*-?\s*5070\s*-?\s*ti\b", re.IGNORECASE)),
+    ("5070 Ti", re.compile(r"\b5070\s*-?\s*ti\b", re.IGNORECASE)),
+    ("RX 9070 XT", re.compile(r"\brx\s*-?\s*9070\s*-?\s*xt\b", re.IGNORECASE)),
+    ("9070 XT", re.compile(r"\b9070\s*-?\s*xt\b", re.IGNORECASE)),
+    ("RX 9070", re.compile(r"\brx\s*-?\s*9070\b", re.IGNORECASE)),
+    ("RX 7900 XTX", re.compile(r"\brx\s*-?\s*7900\s*-?\s*xtx\b", re.IGNORECASE)),
+    ("7900 XTX", re.compile(r"\b7900\s*-?\s*xtx\b", re.IGNORECASE)),
+    ("RX 7900 XT", re.compile(r"\brx\s*-?\s*7900\s*-?\s*xt\b", re.IGNORECASE)),
+    ("7900 XT", re.compile(r"\b7900\s*-?\s*xt\b", re.IGNORECASE)),
+]
+
+for entry in chs_feed.entries:
+    post_id = entry.get("id", entry.get("link"))
+    title = entry.get("title", "")
+
+    if post_id in seen_posts:
+        continue
+
+    title_lower = title.lower()
+
+    match_label = extract_first_match(title_lower, chs_keyword_labels_and_regexes)
+    if match_label:
+        # CanadianHardwareSwap posts usually do not include clear prices; we alert on keyword match.
+        new_matches.append((title, entry.link, f"CHS match: {match_label}"))
+        seen_posts.add(post_id)
+
 # --- SEND ALERTS ---
 # If dry-run, print a human-readable list and avoid sending or marking side effects.
 # Otherwise, build a single message body with reasons and links and push via Apprise.
@@ -218,8 +296,7 @@ if new_matches:
             print(f"\n{i}. {title}")
             print(f"   Reason: {reason}")
             print(f"   Link: {link}")
-        with open(LOG_FILE, "a", encoding="utf-8") as f:
-            f.write(f"[{datetime.datetime.now()}] DRY RUN: Found {len(new_matches)} deals. No notification sent.\n")
+        log(f"DRY RUN: Found {len(new_matches)} deals. No notification sent.")
     else:
         # message includes title, reason, and link for each match
         message = "\n\n".join([f"{t}\n{reason}\n{u}" for t, u, reason in new_matches])
@@ -231,15 +308,13 @@ if new_matches:
             body=message
         )
         print(f"✅ Sent {len(new_matches)} alert(s)")
-        with open(LOG_FILE, "a", encoding="utf-8") as f:
-            f.write(f"[{datetime.datetime.now()}] Found {len(new_matches)} new deals. Notification sent.\n")
+        log(f"Found {len(new_matches)} new deals. Notification sent.")
 else:
     if dry_run_mode:
         print("🔍 DRY RUN: No deals found matching filters.")
     else:
         print("No new deals found matching filters.")
-    with open(LOG_FILE, "a", encoding="utf-8") as f:
-        f.write(f"[{datetime.datetime.now()}] No new deals found.\n")
+    log("No new deals found.")
 
 # --- SAVE UPDATED SEEN POSTS ---
 # Save updated seen posts atomically

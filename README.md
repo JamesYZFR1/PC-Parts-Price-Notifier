@@ -1,6 +1,9 @@
 # PC Parts Price Notifier
 
-This script monitors /r/bapcsalescanada RSS feed and sends notifications for PC parts deals based on configurable price thresholds.
+This script monitors:
+
+- /r/bapcsalescanada RSS feed for price-based PC parts deals
+- /r/CanadianHardwareSwap RSS feed for high-end GPU keyword matches (regardless of price)
 
 ## Quick Start Batch Files
 
@@ -14,9 +17,19 @@ The script will notify you for:
 
 1. **CPUs under $500** - Detects posts with `[CPU]` tags, known CPU models, or containing words like 'processor' or 'cpu'
 2. **CPU Bundles under $600** - Detects posts with `[CPU Bundle]` tags or containing "cpu bundle"
-3. **GPUs under $800** - Detects posts with `[GPU]` tags
+3. **GPUs under $800** - Detects posts with `[GPU]` tags (bapcsalescanada)
 4. **Monitors under $1000** - Detects posts containing the word "monitor"
 5. **Specific CPU models** - Always alerts for: 5800X3D, 7600X3D, 7800X3D (if price is under $500)
+
+Additionally, the notifier checks the r/CanadianHardwareSwap feed and alerts on titles containing any of these GPU models (case/spacing variations supported):
+
+- RTX 5090, 5090
+- RTX 4090, 4090
+- RTX 4080 SUPER, 4080 SUPER, 4080
+- RTX 5070 Ti, 5070 Ti
+- RX 7900 XTX, 7900 XTX
+- RX 7900 XT, 7900 XT
+- RX 9070 XT, 9070 XT, RX 9070
 
 ## Configuration
 
@@ -46,11 +59,31 @@ python pc_parts_price_notifier.py --test
 python pc_parts_price_notifier.py --dry-run
 ```
 
+### Environment variables (optional)
+
+You can override configuration via env vars instead of editing the script:
+
+- `APPRISE_URLS` – Comma‑separated Apprise URLs (e.g., your Discord webhook)
+- `ROLE_MENTION` – Optional Discord role mention like `<@&123456789012345678>`
+- `FEED_URL` – RSS URL to read
+- `CHS_FEED_URL` – RSS URL for r/CanadianHardwareSwap (defaults to `https://old.reddit.com/r/CanadianHardwareSwap/.rss`)
+- `SEEN_FILE` – Path to file for storing alerted post IDs
+- `LOG_FILE` – Path to the run log file
+- `TIMEZONE` – IANA timezone like `America/Toronto` or `UTC` (affects timestamps in logs)
+
+PowerShell example for a one‑off session:
+
+```powershell
+$env:APPRISE_URLS = "https://discord.com/api/webhooks/..."
+$env:TIMEZONE = "America/Toronto"
+python .\pc_parts_price_notifier.py --dry-run
+```
+
 ## How It Works
 
-1. Fetches RSS feed from /r/bapcsalescanada
+1. Fetches RSS feed from /r/bapcsalescanada and /r/CanadianHardwareSwap
 2. Extracts prices from post titles (prefers "=$123" format, falls back to last $amount)
-3. Checks each post against the filters above
+3. Checks each bapcsalescanada post against price filters, and each CanadianHardwareSwap post against the GPU keyword list
 4. Skips posts it has already alerted for (stored in `seen_posts.txt`)
 5. Sends notifications via configured Apprise URLs (Discord webhook, etc.)
 6. Logs activity to `run_log.txt`
@@ -68,6 +101,16 @@ Setup:
 State and logs:
 - The workflow commits updates to `seen_posts.txt` back to the repository so the bot won’t re-alert on the same posts.
 - The local `run_log.txt` on your PC will NOT update when the workflow runs in the cloud. Instead, each run uploads the workflow's `run_log.txt` as a downloadable artifact named `run_log` (kept for 14 days). Open a workflow run → Artifacts to download.
+
+### Manually trigger test or dry-run from Actions
+
+The workflow supports a Run mode input when you click "Run workflow":
+
+- normal: runs on schedule or manual trigger and sends real alerts
+- test: runs `--test` to send a single test notification (useful to verify your webhook and role mention)
+- dry-run: runs `--dry-run` to list matches without sending notifications
+
+Note on secrets visibility: GitHub hides secret values. When you edit the `APPRISE_URLS` secret it will appear empty in the UI—that’s normal. Paste a new value to rotate/replace it; you cannot view the old value.
 
 ## Avoid local Git conflicts
 

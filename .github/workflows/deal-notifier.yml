@@ -2,6 +2,16 @@ name: PC Parts Price Notifier
 
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode (normal sends alerts, test sends a test message, dry-run prints matches)"
+        required: false
+        default: "normal"
+        type: choice
+        options:
+          - normal
+          - test
+          - dry-run
   schedule:
     - cron: "*/5 * * * *"  # every 5 minutes (best-effort)
 
@@ -31,15 +41,38 @@ jobs:
           python -m pip install --upgrade pip
           pip install feedparser apprise
 
+      - name: Compute run args
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MODE="${{ github.event.inputs.mode }}"
+          else
+            MODE="normal"
+          fi
+          echo "MODE=$MODE" >> $GITHUB_ENV
+
       - name: Run notifier
         env:
           APPRISE_URLS: ${{ secrets.APPRISE_URLS }} # comma-separated, e.g. https://discord.com/api/webhooks/...,pb://...
           ROLE_MENTION: ${{ secrets.ROLE_MENTION }}
+          TIMEZONE: ${{ vars.TIMEZONE }} # set repository variable TIMEZONE (e.g., America/Toronto) or leave unset for UTC
           FEED_URL: https://www.reddit.com/r/bapcsalescanada/.rss
           SEEN_FILE: seen_posts.txt
           LOG_FILE: run_log.txt
         run: |
-          python pc_parts_price_notifier.py
+          case "$MODE" in
+            test)
+              echo "Running in TEST mode"
+              python pc_parts_price_notifier.py --test
+              ;;
+            dry-run)
+              echo "Running in DRY-RUN mode"
+              python pc_parts_price_notifier.py --dry-run
+              ;;
+            *)
+              echo "Running in NORMAL mode"
+              python pc_parts_price_notifier.py
+              ;;
+          esac
 
       - name: Upload run log
         if: always()
