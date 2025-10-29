@@ -10,7 +10,8 @@ r"""
 PC Parts Price Notifier
 -----------------------
 Purpose:
-    Polls the /r/bapcsalescanada RSS feed and sends notifications for deals
+    Polls the /r/bapcsalescanada RSS feed and the /r/CanadianHardwareSwap RSS feed,
+    sending notifications for deals/keywords that match rules
     that match price rules (CPU, CPU bundles, GPUs, monitors, motherboards).
 
 Key features:
