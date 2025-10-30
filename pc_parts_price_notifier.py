@@ -4,6 +4,7 @@ import feedparser
 import apprise
 import datetime
 import sys
+from typing import Iterable, Optional, Pattern, Tuple, Union
 from zoneinfo import ZoneInfo
 
 r"""
@@ -98,7 +99,6 @@ if "--test" in sys.argv:
         test_message = f"{ROLE_MENTION}\n\n{test_message}"
     
     notifier.notify(
-        title="Test Notification",
         body=test_message
     )
     print("✅ Test notification sent!")
@@ -159,7 +159,10 @@ def has_1000w_psu(text: str) -> bool:
 
 
 
-def extract_first_match(text: str, patterns: list[str]) -> str | None:
+def extract_first_match(
+    text: str,
+    patterns: Iterable[Union[str, Tuple[str, Pattern[str]]]]
+) -> Optional[str]:
     """Return the first human-readable pattern label that matches the given text.
 
     "patterns" items can be tuples (label, compiled_regex) or strings (interpreted as regex with word-ish boundaries).
@@ -356,7 +359,6 @@ if new_matches:
         if ROLE_MENTION:
             message = f"{ROLE_MENTION}\n\n" + message
         notifier.notify(
-            title="New PC parts deals",
             body=message
         )
         print(f"✅ Sent {len(new_matches)} alert(s)")
