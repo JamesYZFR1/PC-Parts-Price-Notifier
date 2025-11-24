@@ -66,7 +66,7 @@ if _env_apprise:
     APPRISE_URLS = [u.strip() for u in _env_apprise.split(",") if u.strip()]
 else:
     APPRISE_URLS = [
-        "https://discord.com/api/webhooks/1431577042331373579/mr3FwZ90w15NC7MOVC2gO4B1RDT2LfqgohBTJYobYbmuWNm4MC7MYnJvm1TR8DhabV_h",
+        "",
         # "pb://...", 
         # "mailto://..."
     ]
